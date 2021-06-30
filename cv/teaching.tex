@@ -1,0 +1,190 @@
+
+\DTLloaddb[]{teaching}{cv/carpentries.csv}
+
+\def\carpentries{0}
+\def\longpres{0}
+\def\invitedpres{0}
+\def\campuspres{0}
+\def\conferencepres{0}
+\def\totalpres{0}
+
+
+\DTLforeach{teaching}{%
+%Status Carpentries
+\status=Status}{%
+\DTLifeq{\status}{Presentation}{%
+\DTLgadd{\invitedpres}{1}{\invitedpres}%
+}{}%
+\DTLifeq{\carpentries}{0}{%
+\DTLgadd{\longpres}{1}{\longpres}%
+}{}%
+\DTLifeq{\status}{Campus}{%
+\DTLgadd{\campuspres}{1}{\campuspres}%
+}{}%
+\DTLifeq{\status}{Conference}{%
+\DTLgadd{\conferencepres}{1}{\conferencepres}%
+}{}%
+%\dtlappendentrytocurrentrow{Presentation}{\presstatus}%
+%\DTLgadd{\campuspres}{\DTLifeq{\status}{Campus}{1}{0}}{\campuspres}%
+%\DTLgadd{\conferencepres}{\DTLifeq{\status}{Conference}{1}{0}}{\conferencepres}%
+}
+\DTLsavelastrowcount{\totalpres}
+
+\DTLsumcolumn{teaching}{Carpentries}{\carpentries}
+
+
+
+%\newpage
+
+\cvsection{Teaching}
+
+
+
+\begin{cvhonors}
+\cvhonor{Supervision and Mentoring}{Providing degree supervision and/or long-term mentoring}{2019 -- present}{7}
+\cvhonor{Sessional Units}{Semester-length units convened}{2007 -- present}{11}
+\cvhonor{Carpentries Digital Skills Teaching}{Carpentries branded workshops and instructor training}{2017 -- Present}{\carpentries{}}
+\cvhonor{Other Digital Skills Training}{}{2018 -- Present}{\longpres{}}
+\end{cvhonors}
+
+
+\cvsubsection{Supervision and Mentoring}
+
+\begin{cventries}
+\cventry
+    {Camilla Di Biase-Dyson (Mentor)}
+    {Lecturer in Egyptology}
+    {2020--onwards}
+    {Macquarie University, Faculty of Arts}
+    {Mentoring and technical elaboration for her Ramses Online hieroglyphic research}
+\cventry
+    {Jade Hutchinson (Mentor)}
+    {ECR / PhD Candidate}
+    {2021--onwards}
+    {Macquarie University, Faculty of Arts}
+    {MRes and PhD research on Online Right-Wing Extremism, Article Collaborations, \& RESOLVE Project}
+\cventry
+    {Bree Kelly (Co-Supervisor)}
+    {Masters by Research, Ancient History}
+    {2020-2021}
+    {Macquarie University, Faculty of Arts}
+    {Thesis: \textit{Innovations in Machine Learning: A Case Study of the Fabricius Workbench.}}
+\cventry
+    {Austin Megier (Mentor)}
+    {Masters by Research, Ancient History}
+    {2019--2020}
+    {Macquarie University, Faculty of Arts}
+    {SQL database for MRes}
+\cventry
+    {Ewan Coopey (Mentor)}
+    {Masters by Research, PhD Candidate, ECR, History and Archaeology}
+    {2019--onwards}
+    {Macquarie University, Faculty of Arts}
+    {SQL database for MRes and PhD, PACE, and static-website generation for other faculty}        
+\cventry
+    {Kathryn Elliott (Co-Supervisor)}
+    {Masters by Research, Sociology}
+    {2019}
+    {Macquarie University, Faculty of Arts}
+    {Thesis: \textit{The Expert in the Aisles: Exploring
+supermarket narratives in Coles and Woolworths magazines from 2009-2014 using machine learning techniques.}}
+    
+\end{cventries}
+
+
+
+
+\cvsubsection{Sessional Units}
+
+\begin{cventries}
+\cventry
+    {FOAR705 -- Co-Convener}
+    {Digital Humanities (Graduate)}
+    {2016, 2017, 2019}
+    {Macquarie University, Faculty of Arts}
+    {}
+\cventry
+    {ARTS3991 -- Lecturer}
+    {Arts and Social Sciences Capstone}
+    {2014}
+    {UNSW Australia}
+    {}  
+\cventry
+    {4002-320-01 -- Convener}
+    {Introduction to Multimedia}
+    {2012}
+    {Rochester Institute of Technology}
+    {}  
+\cventry
+    {4002-360-01 / 4002-720-01 -- Convener}
+    {Introduction to Databases (Undergrad) / Data Object Development (Graduate)}
+    {2007, 2012}
+    {Rochester Institute of Technology}
+    {}   
+\cventry
+    {INFS2607 -- Lecturer}
+    {Infrastructure and Security}
+    {2014}
+    {UNSW Australia}
+    {}     
+\cventry
+    {INFS1602 -- Tutor}
+    {Information Systems in Business}
+    {2014}
+    {UNSW Australia}
+    {}    
+\cventry
+    {4002-484-01 -- Convener}
+    {Fundamentals of Client Server Interaction}
+    {2008}
+    {Rochester Institute of Technology}
+    {}      
+\cventry
+    {4002-461-01 -- Convener}
+    {Fundamentals of Data Modelling}
+    {2007}
+    {Rochester Institute of Technology}
+    {}     
+% \cventry
+%     {4002-720-01 -- Convener}
+%     {Data Object Development (Graduate)}
+%     {2007}
+%     {Rochester Institute of Technology}
+%     {}      
+\end{cventries}
+
+
+\cvsubsection{Digital/Cyber-related Teaching}
+
+
+\begin{cventries}
+\DTLforeach[\equal{\acadstatus}{Workshop}]{teaching}{%
+%ProjectName    Date    Role    Location    Description1    Description2    
+\projectname=ProjectName,%
+\date=Date,%
+\role=Role,%
+\location=Location,%
+\descone=Description1,%
+\desctwo=Description2,%
+\acadstatus=Status}%
+{%
+ \cventry
+    {\role} % subhead
+    {\projectname} % head
+    {\date} % green
+    {\location} % flushright grey
+    {%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+\end{cventries}

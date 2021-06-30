@@ -1,0 +1,193 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+
+\cvsection{Presentations}
+
+\DTLloaddb[]{presentations}{cv/presentations.csv}
+\cvsubsection{Summary}
+\def\carpentries{0}
+\def\longpres{0}
+\def\invitedpres{0}
+\def\campuspres{0}
+\def\conferencepres{0}
+\def\totalpres{0}
+
+
+\DTLforeach{presentations}{%
+%Status Carpentries
+\status=Status}{%
+\DTLifeq{\status}{Presentation}{%
+\DTLgadd{\invitedpres}{1}{\invitedpres}%
+}{}%
+\DTLifeq{\status}{Workshop}{%
+\DTLgadd{\longpres}{1}{\longpres}%
+}{}%
+\DTLifeq{\status}{Campus}{%
+\DTLgadd{\campuspres}{1}{\campuspres}%
+}{}%
+\DTLifeq{\status}{Conference}{%
+\DTLgadd{\conferencepres}{1}{\conferencepres}%
+}{}%
+%\dtlappendentrytocurrentrow{Presentation}{\presstatus}%
+%\DTLgadd{\campuspres}{\DTLifeq{\status}{Campus}{1}{0}}{\campuspres}%
+%\DTLgadd{\conferencepres}{\DTLifeq{\status}{Conference}{1}{0}}{\conferencepres}%
+}
+\DTLsavelastrowcount{\totalpres}
+
+\DTLsumcolumn{presentations}{Carpentries}{\carpentries}
+
+
+
+\begin{cvhonors}
+%\cvhonor{Carpentries Workshops}{Carpentries branded events and instructor training}{2017 -- Present}{\carpentries{}}
+%\cvhonor{Long workshops}{}{2017 -- Present}{\longpres{}}
+\cvhonor{Invited presentations}{}{2019 -- Present}{\invitedpres{}}
+\cvhonor{Selected on-campus presentations}{}{2016 -- Present}{\campuspres{}}
+\cvhonor{Peer-reviewed conference presentations}{}{2006 -- Present}{\conferencepres{}}
+\cvhonor{Total presentations}{}{2006 -- Present}{\totalpres{}}
+\end{cvhonors}
+
+
+
+%\cvsubsection{Long Workshops}
+
+
+\begin{cventries}
+\DTLforeach[\equal{\acadstatus}{Workshop}]{presentations}{%
+%ProjectName	Date	Role	Location	Description1	Description2    
+\projectname=ProjectName,%
+\date=Date,%
+\role=Role,%
+\location=Location,%
+\descone=Description1,%
+\desctwo=Description2,%
+\acadstatus=Status}%
+{%
+ \cventry
+    {\role} % subhead
+    {\projectname} % head
+    {\date} % green
+    {\location} % flushright grey
+    {%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+\end{cventries}
+
+\cvsubsection{Invited Presentations}
+
+
+\begin{cventries}
+\DTLforeach[\equal{\acadstatus}{Presentation}]{presentations}{%
+%ProjectName	Date	Role	Location	Description1	Description2    
+\projectname=ProjectName,%
+\date=Date,%
+\role=Role,%
+\location=Location,%
+\descone=Description1,%
+\desctwo=Description2,%
+\acadstatus=Status}%
+{%
+ \cventry
+    {\role} % subhead
+    {\projectname} % head
+    {\date} % green
+    {\location} % flushright grey
+    {%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+\end{cventries}
+
+
+\cvsubsection{Campus Presentations}
+
+
+\begin{cventries}
+\DTLforeach[\equal{\acadstatus}{Campus}]{presentations}{%
+%ProjectName	Date	Role	Location	Description1	Description2    
+\projectname=ProjectName,%
+\date=Date,%
+\role=Role,%
+\location=Location,%
+\descone=Description1,%
+\desctwo=Description2,%
+\acadstatus=Status}%
+{%
+ \cventry
+    {\role} % subhead
+    {\projectname} % head
+    {\date} % green
+    {\location} % flushright grey
+    {%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+\end{cventries}
+
+
+\cvsubsection{Conference Presentations}
+
+
+\begin{cventries}
+\DTLforeach[\equal{\acadstatus}{Conference}]{presentations}{%
+%ProjectName	Date	Role	Location	Description1	Description2    
+\projectname=ProjectName,%
+\date=Date,%
+\role=Role,%
+\location=Location,%
+\descone=Description1,%
+\desctwo=Description2,%
+\acadstatus=Status}%
+{%
+ \cventry
+    {\role} % subhead
+    {\projectname} % head
+    {\date} % green
+    {\location} % flushright grey
+    {%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+\end{cventries}

@@ -1,0 +1,59 @@
+\cvsection{Projects}
+
+\DTLloaddb[]{projects}{cv/projects.csv}
+
+\cvsubsection{Summary}
+\def\projectaffiliated{0}
+\def\projectexternal{0}
+\def\projecttotal{0}
+
+\DTLforeach{projects}{%
+%GrantAffiliated	External
+\affiliated=GrantAffiliated,%
+\external=External}{%
+\DTLgadd{\projectaffiliated}{\affiliated}{\projectaffiliated}%
+\DTLgadd{\projectexternal}{\external}{\projectexternal}%
+\DTLgadd{\projecttotal}{1}{\projecttotal}%
+}
+\begin{cvhonors}
+\cvhonor{projects with external funding}{excluding FAIMS sub-projects}{2012 -- Present}{\projectaffiliated{}}
+\cvhonor{projects with external impact}{excluding FAIMS sub-projects}{2012 -- Present}{\projectexternal{}}
+\cvhonor{total projects}{excluding FAIMS sub-projects}{2012 -- Present}{\projecttotal{}}
+\cvhonor{FAIMS sub-projects}{modules, extensions, and custom exporters}{2014 -- Present}{64}
+\end{cvhonors}
+\cvsubsection{Project Details}
+\begin{cventries}
+\DTLforeach{projects}{%
+%ProjectName	StartYear	StopYear	Collaborator	Tools	Description1	Description2
+\projectname=ProjectName,%
+\startyear=StartYear,%
+\stopyear=StopYear,%
+\collaborator=Collaborator,%
+\tools=Tools,%
+\descone=Description1,%
+\desctwo=Description2}%
+{%
+ \cventry
+    {\tools} % subhead
+    {\projectname} % head
+    {\startyear{} -- \DTLifnullorempty{\stopyear}{Present}{\stopyear{}}} % green
+    {\collaborator} % flushright grey
+    {%
+    %\ifthenelse{\DTLcurrentindex=16}{\dtlbreak}{}%
+    \DTLifnullorempty
+        {\descone}
+        {}
+        {\begin{cvitems}
+        \item \descone%
+        \DTLifnullorempty
+            {\desctwo}
+            {}
+            {\item \desctwo}
+        \end{cvitems}
+        }
+    }
+}
+
+
+
+\end{cventries}

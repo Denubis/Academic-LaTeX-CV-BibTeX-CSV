@@ -1,0 +1,31 @@
+ProjectName,Date,Role,Location,Description1,Description2,Status,Carpentries
+Introduction to Active Data Management,2020 April,Lead Instructor,"Online Workshop, Macquarie University",1 Day Software Carpentry themed workshop,,Workshop,
+Annotated Data Management Guidelines,2020 April,Lead Instructor,"Online Workshop, Macquarie University","Collaboration with the Research Integrity Secretariat, presenting the new data management plan standards",,Workshop,
+Jupyter Notebooks,2020 April,Co-Instructor,"Online Workshop, Macquarie University","In collaboration with the ARDC, teaching HDRs and ECRs about Jupyter notebooks",,Workshop,
+Mapping Networks and Narratives of Online Right Wing Extremists in New South Wales,2020 February,Presenter,NSW Department of Communities and Justice,High level brief to multiple senior civil servants and police representatives on our analysis of Far Right Extremism in NSW on Social Media,,Presentation,
+"Software Carpentry inspired: From a Spreadsheet to a Database, SQL Intensive workshop",2020 January,Sole Instructor,Macquarie University,2 day workshop providing in-depth SQL training and hands-on database design for Faculty of Arts MRES students.,,Workshop,1
+"The Case for Work, eResearch Talk",2019 December,Presenter,Macquarie University Library,Talk for PVC Peter Nelson’s eResearch series on development of onwork.edu.au,,Campus,
+Extended Brief on Far-Right Extremism,2019 November,Presenter,NSW Department of Communities and Justice,"Providing a confidential research update, discussing our research to date on far-right extremism",,Presentation,
+Analysis Before the Spade,2019 November,Presenter,"CACHE Workshop, Macquarie University",Presenting a book chapter on the need for preregistration in Archaeology,,Campus,
+"Lessons learned from Data Analysis projects in Natural Language Processing with Japanese and Security Studies data - Shell Scripts, Jupyter Notebooks, and the value of doctests",2019 November,Presenter,"Digital Approaches to Research in Humanities and Social Sciences Workshop, Aarhus University",Remote presentation to scholars at Aarhus regarding the value of scripted doctests in a research context.,,Presentation,
+"Software Carpentry: Python, Bash, SQL",2019 October,Lead Instructor,"Research Bazaar 2019 Software Carpentry Workshop, UNSW Australia",2 Day Software Carpentry Workshop,,Workshop,1
+Software Carpentry: Train-the-Trainer,2019 July,Instructor,Macquarie University,2 day Carpentries workshop on training-the-trainers,,Workshop,1
+Software Carpentry: Train-the-Trainer,2019 May,Lead Instructor,Curtin University,2 day Carpentries workshop on training-the-trainers,,Workshop,1
+"Software Carpentry: SQL, Bash, Git",2019 April,Lead Instructor,"Software Carpentry Workshop, Macquarie University",2 Day Software Carpentry Workshop,,Workshop,1
+Transparent data practice for reliable and reproducible research Workshop ,2018 November,Presenter,Macquarie University Library,1 day workshop on transparent research practices,,Workshop,
+"Software Carpentry: Python, Bash, Git",2018 October,Lead Instructor,"Software Carpentry Workshop, Macquarie University",2 Day Software Carpentry Workshop,,Workshop,1
+Git for Macquarie R Users Group,2018 August,Presenter,"MQ R Users Group, Macquarie University",On the importance of incorporating Git into academic workflows,,Campus,
+"Software Carpentry: SQL, Webscraping, and Spreadsheet to a Database",2018 July,Lead Instructor,"Research Bazaar 2018 Software Carpentry Workshop, Macquarie University",2 Day Software Carpentry Workshop,,Workshop,1
+"Software Carpentry: R, Bash, and Git",2017 September,Lead Instructor,"Software Carpentry Workshop, Macquarie University",2 Day Software Carpentry Workshop,,Workshop,1
+"Software Carpentry: R, Bash, and Git",2017 August,Lead Instructor,"Software Carpentry Workshop, Macquarie University",2 Day Software Carpentry Workshop,,Workshop,1
+"Software Carpentry: Python, Bash, Git",2017 March,Helper,"University of Technology, Sydney",2 Day Software Carpentry Workshop,,Workshop,1
+"Open Data, The Reproducibility Problem, and Sympathetic Magic",2016 December,Presenter,Macquarie Minds 2016,Presentation for the Macquarie Minds Event,,Campus,
+Arbitrary Offline Data Capture on all of your Androids: The FAIMS Mobile Platform,2013 March,Presenter,"Computer Applications in Archaeology conference, Perth",Presenting on FAIMS,,Conference,
+FAIMS \& Open Source Applications in Archaeology,2013 January,Presenter,"World Archaeological Conference 7, Jordan",,,Conference,
+Extending the ETL Process Through a Working Data Interchange Graph and Understanding Different Realities of Data,2012 October,Presenter,eResearch Australasia 2012,Presenting design constraints of FAIMS as seen through the Philosophy of Data,,Conference,
+What is Data: some Different Philosophies of Data,2012 August,"Presenter, Host",FAIMS Workshop,Presenting the Philosophy of Data to archaeologists at the FAIMS Workshop,One of the organisers of the FAIMS Workshop,Conference,
+"\#c3t An Agreeable Swarm: Twitter, the Democratisation of Media \& Non-Localised Proximity",2010 November,Presenter,International Conference on Computer and Information Technology 2010,Presenting co-authored Twitter research with Kate Carruthers,,Conference,
+\#c3t The Command \& Control of Twitter: on a Socially Constructed Twitter \& Applications of the Philosophy of Data,2010 November,Presenter,International Conference on Computer and Information Technology 2010,Presenting co-authored Twitter research with Kate Carruthers,,Conference,
+Asking about Data: Experimental Philosophy of Information Technology,2010 November,Presenter,International Conference on Computer and Information Technology 2010,Presenting dissertation research about the Philosophy of Data.,,Conference,
+Flying a Manta with Gesture and Controller: An Exploration of Certain Interfaces in Human-Robot Interaction,2007 May,Presenter,Gesture Workshop 2007,"Presenting thesis research at the Gesture Workshop 2007 in Lisbon, Portugal",,Conference,
+The Manta Project,2006 August,Presenter,ReActor,"Presented Masters research (Giant wire-guided “manta ray” controlled via haptic glove) for (re)Actor, London",,Conference,
