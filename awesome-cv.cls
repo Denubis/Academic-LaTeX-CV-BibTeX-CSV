@@ -101,13 +101,14 @@
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
   pdftitle={},
-  pdfauthor={},
+  pdfauthor={Brian Ballsun-Stanton},
   pdfsubject={},
   pdfkeywords={}
 }
 % ORCID icon
 \usepackage{academicons}
 
+\RequirePackage{microtype}
 \usepackage[
 backend=biber,
 style=apa,
