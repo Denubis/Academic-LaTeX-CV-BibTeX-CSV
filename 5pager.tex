@@ -1,0 +1,145 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for 5pager/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+% Brian Ballsun-Stanton (brian.ballsun-stanton@mq.edu.au)
+% 
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+
+\usepackage{datatool}
+\usepackage{xparse}
+% https://tex.stackexchange.com/a/376174
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Following entry pattern: https://zety.com/blog/academic-cv-example
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+
+\addbibresource{bibliography.bib}
+
+
+
+\name{Dr}{Brian}{Ballsun-Stanton}
+\position{Solutions Architect (Digital Humanities)}
+
+\input{homeaddress}
+
+
+% \address{First Address \\ Second Address}
+% \mobile{(+61) 111 111 111}
+
+\email{brian.ballsun-stanton@mq.edu.au}
+\orcid{0000-0003-4932-7912}
+\github{denubis}
+\homepage{https://osf.io/dza9b/}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+\googlescholar{gc0PEWQAAAAJ}{}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+%\quote{``The purpose of a system is what it does." - Stafford Beer} But quotes at the start of CVs seems... tacky. 
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Dr Brian Ballsun-Stanton~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	5pager/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\vspace{0.5cm}
+\input{5pager/researchObjective.tex}
+% \vspace{0.5cm}
+\input{5pager/experience.tex}
+% \vspace{0.5cm}
+\input{5pager/education.tex}
+\input{5pager/publications.tex}
+
+\input{5pager/grants.tex}
+\input{5pager/projects.tex}
+\input{5pager/teaching.tex}
+\input{5pager/presentation.tex}
+% \input{5pager/reviewing.tex}
+
+% \input{5pager/service.tex}
+\input{5pager/skills.tex}
+% \input{5pager/experience.tex}
+% \input{5pager/extracurricular.tex}
+% \input{5pager/honors.tex}
+% \input{5pager/presentation.tex}
+% \input{5pager/writing.tex}
+
+
+
+
+\vfill
+{\tiny
+CV produced using \LaTeX. Source code available at: \href{https://github.com/Denubis/Academic-LaTeX-CV-BibTeX-CSV}{\tt github.com/Denubis/Academic-LaTeX-CV-BibTeX-CSV}. CV content CC-BY-SA. {\tt Awesome-CV.cls} licensed LPPL.}
+
+%-------------------------------------------------------------------------------
+\end{document}

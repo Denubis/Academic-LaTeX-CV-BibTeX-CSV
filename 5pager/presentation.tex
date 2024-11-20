@@ -118,8 +118,11 @@
     }
 }
 \end{cventries}
-\vspace{-1cm}
-\cvsubsection{Invited Presentations}
+
+\newcounter{presentcounter}
+
+\cvsubsection{Recent Invited Presentations}
+
 \begin{cventries}
 \DTLforeach[\equal{\acadstatus}{Presentation}]{presentations}{%
 %ProjectName	Date	Role	Location	Description1	Description2    
@@ -131,6 +134,10 @@
 \desctwo=Description2,%
 \acadstatus=Status}%
 {%
+\stepcounter{presentcounter}
+\ifnum\value{presentcounter}>3\relax
+  \dtlbreak
+\fi
  \cventry
     {\role} % subhead
     {\projectname} % head
@@ -153,43 +160,44 @@
 \end{cventries}
 
 
-\cvsubsection{Campus Presentations}
+% \cvsubsection{Campus Presentations}
 
 
-\begin{cventries}
-\DTLforeach[\equal{\acadstatus}{Campus}]{presentations}{%
-%ProjectName	Date	Role	Location	Description1	Description2    
-\projectname=ProjectName,%
-\date=Date,%
-\role=Role,%
-\location=Location,%
-\descone=Description1,%
-\desctwo=Description2,%
-\acadstatus=Status}%
-{%
- \cventry
-    {\role} % subhead
-    {\projectname} % head
-    {\date} % green
-    {\location} % flushright grey
-    {%
-    \DTLifnullorempty
-        {\descone}
-        {}
-        {\begin{cvitems}
-        \item \descone%
-        \DTLifnullorempty
-            {\desctwo}
-            {}
-            {\item \desctwo}
-        \end{cvitems}
-        }
-    }
-}
-\end{cventries}
+% \begin{cventries}
+% \DTLforeach[\equal{\acadstatus}{Campus}]{presentations}{%
+% %ProjectName	Date	Role	Location	Description1	Description2    
+% \projectname=ProjectName,%
+% \date=Date,%
+% \role=Role,%
+% \location=Location,%
+% \descone=Description1,%
+% \desctwo=Description2,%
+% \acadstatus=Status}%
+% {%
+%  \cventry
+%     {\role} % subhead
+%     {\projectname} % head
+%     {\date} % green
+%     {\location} % flushright grey
+%     {%
+%     \DTLifnullorempty
+%         {\descone}
+%         {}
+%         {\begin{cvitems}
+%         \item \descone%
+%         \DTLifnullorempty
+%             {\desctwo}
+%             {}
+%             {\item \desctwo}
+%         \end{cvitems}
+%         }
+%     }
+% }
+% \end{cventries}
 
+\newcounter{confcounter}
 
-\cvsubsection{Conference Presentations}
+\cvsubsection{Recent Conference Presentations}
 
 
 \begin{cventries}
@@ -203,6 +211,10 @@
 \desctwo=Description2,%
 \acadstatus=Status}%
 {%
+\stepcounter{confcounter}
+\ifnum\value{confcounter}>2\relax
+  \dtlbreak
+\fi
  \cventry
     {\role} % subhead
     {\projectname} % head
